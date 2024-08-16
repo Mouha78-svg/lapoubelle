@@ -1,8 +1,9 @@
 import { Stack } from 'expo-router'
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { LogBox, Text, View } from 'react-native'
 
 export default function   _layout (){
+  LogBox.ignoreLogs(["Erreur"])
     return (
       <Stack 
       screenOptions={{

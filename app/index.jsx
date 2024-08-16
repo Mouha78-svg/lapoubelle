@@ -10,7 +10,7 @@ export default function  Index ()  {
   const router = useRouter();
   
     return (
-      <Animated.View entering={FadeInDown.delay(100).springify()} className="flex-1 flex justify-end ">
+      <Animated.View entering={FadeInDown.delay(100).springify()} className="flex-1 flex justify-center items-center ">
         <StatusBar style='light' />
         <Image className="h-full w-full absolute" source={require("../assets/images/poubwelkome.png")} />
         <LinearGradient colors={['transparent', 'green']} 

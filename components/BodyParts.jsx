@@ -5,6 +5,7 @@ import { bodyParts } from '../constants';
 import { FlatList } from 'react-native-gesture-handler';
 import { TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
+import Animated, { FadeInDown } from 'react-native-reanimated';
 
 export default function BodyParts () {
     const router = useRouter();
@@ -12,7 +13,7 @@ export default function BodyParts () {
       <View>
         <Text 
         className="mx-4"
-        style={{fontSize: hp(5) ,fontWeight: 700}}> Execises </Text>
+        style={{fontSize: hp(5) ,fontWeight: 300}}>Approches... </Text>
 
         <FlatList 
           data={bodyParts}
@@ -29,7 +30,7 @@ export default function BodyParts () {
 
 function BodyPartCard ({item,router,index}){
     return (
-        <View>
+        <Animated.View entering={FadeInDown.duration(400).delay(index*200).springify()} >
             <TouchableOpacity
             onPress={() => router.push({pathname: '/exercises', params: item})}
             style={{width: wp(44), height: wp(52)}}
@@ -47,6 +48,6 @@ function BodyPartCard ({item,router,index}){
             {item?.name}
            </Text>
             </TouchableOpacity>
-        </View>
+        </Animated.View>
     )
 }
