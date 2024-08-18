@@ -8,7 +8,7 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import Animated, { FadeInDown } from 'react-native-reanimated'
 // import Ionicons from '@react-native-vector-icons/ionicons';
 
-export default function Exercises () {
+export default function Article () {
     const router = useRouter();
     const item = useLocalSearchParams();
     // console.log(item)

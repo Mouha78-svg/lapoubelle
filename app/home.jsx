@@ -7,6 +7,7 @@ import { Image } from 'react-native';
 import ImageSlider from '../components/ImageSlider';
 import BodyParts from '../components/BodyParts';
 
+
 export default function Home () {
     return (
       <SafeAreaView className="flex-1 bg-white flex space-y-5" edges={['top']}>
@@ -37,7 +38,6 @@ export default function Home () {
         <View className="flex-1">
             <BodyParts />
         </View>
-
 
       </SafeAreaView>
     )
